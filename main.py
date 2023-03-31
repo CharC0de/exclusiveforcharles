@@ -134,7 +134,7 @@ def delValue():
        mysqldb.close()
 
 def show():
-        mysqldb = mysql.connector.connect(host="localhost", user="root", password="", database="warshak")
+        mysqldb = mysql.connector.connect(host="localhost", user="root", password="", database="dbactivity4")
         mycursor = mysqldb.cursor()
         mycursor.execute("SELECT studentid,fname,lname,email,password FROM tbluser")
         tbluser = mycursor.fetchall()
