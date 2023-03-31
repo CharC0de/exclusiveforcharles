@@ -8,16 +8,20 @@ root.title("Activity 4")
 root.geometry("500x500")
 
 Label(root, text="Student ID").place(x=10, y=10)
-v1 = tk.Entry(root).place(x=140, y=10)
+v1 = tk.Entry(root)
+v1.place(x=140, y=10)
 
 Label(root, text="First Name").place(x=10, y=40)
-v2 = tk.Entry(root).place(x=140, y=40)
+v2 = tk.Entry(root)
+v2.place(x=140, y=40)
 
 Label(root, text="Last Name").place(x=10, y=70)
-v3 = tk.Entry(root).place(x=140, y=70)
+v3 = tk.Entry(root)
+v3.place(x=140, y=70)
 
 Label(root, text="Email").place(x=10, y=100)
-v4 = tk.Entry(root).place(x=140, y=100)
+v4 = tk.Entry(root)
+v4.place(x=140, y=100)
 
 Label(root, text="Password").place(x=10,y=130)
 v5 = tk.Entry(root)
@@ -130,7 +134,7 @@ def delValue():
        mysqldb.close()
 
 def show():
-        mysqldb = mysql.connector.connect(host="localhost", user="root", password="", database="dbactivity4")
+        mysqldb = mysql.connector.connect(host="localhost", user="root", password="", database="warshak")
         mycursor = mysqldb.cursor()
         mycursor.execute("SELECT studentid,fname,lname,email,password FROM tbluser")
         tbluser = mycursor.fetchall()
